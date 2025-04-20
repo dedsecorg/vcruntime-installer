@@ -1,3 +1,9 @@
+# Check for administrative privileges
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Output "This script requires administrative privileges. Please run it as Administrator."
+    exit
+}
+
 # Create a directory for downloading runtime files
 $directory = "$env:USERPROFILE\Downloads\VC_Runtimes"
 New-Item -ItemType Directory -Path $directory -Force | Out-Null
