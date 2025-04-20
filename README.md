@@ -1,2 +1,2 @@
 # vcruntime-installer
-VCRuntime installer, all version, all-in-one
+VCRuntime installer, all versions, all-in-one installer.
